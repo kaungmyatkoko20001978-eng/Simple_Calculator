@@ -1,0 +1,31 @@
+#!/bin/bash
+################################
+#Author => Kaung Myat Ko Ko
+#Date => 20.8.2026
+#Version : 1.0
+#Language => Bash
+#Usage: Checking System Health
+################################
+
+set -x #show com
+set -e #exit when error happens, only check last com with pipe operator
+set -o pipefail  #checks pipe and sees them as seperate entities, 
+                 #triggers -e when a pipeline has error
+#set -exo pipefail, set-ex, set -xe also works, order doesnt matter.
+# x -xtrace, e -errorexit, o -option
+#sudo runs single command as root user
+#su switch user
+#sudo su -
+#find / -name "name of file"
+
+
+echo "Number of processors: $(nproc)"
+echo "Memory usage:"
+free -h
+echo "Disk usage:"
+df -h
+echo "Current directory: $(pwd)"
+echo "Meta data of files listed: "
+ls -ltr
+echo "Live view of system health: "
+top -b -n 1
