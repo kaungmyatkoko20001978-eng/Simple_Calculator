@@ -1,0 +1,23 @@
+
+
+a=12
+b=1
+
+if [ $a > $b ];
+then
+	echo "gg"
+else
+	echo 'no'
+fi
+
+for item in apple banana cherry
+do
+    echo "Fruit: $item"
+done
+#!/bin/bash
+
+servers=("web-server" "db-server" "cache-server")
+
+for ser in ${servers[@]};
+do echo "$ser"
+done
