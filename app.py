@@ -29,5 +29,3 @@ if free_gb > 10:
     print("\nStatus: Server health is optimal! Plenty of space left.")
 else:
     print("\nStatus: Warning! Storage is running low.")
-
-a=2
